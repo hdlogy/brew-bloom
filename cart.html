@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cart — Brew &amp; Bloom</title>
+  <meta name="description" content="Your Brew &amp; Bloom sample cart. Adjust quantities, remove items and see the running subtotal.">
+  <meta name="author" content="Brew &amp; Bloom — university UI/UX case study">
+  <meta name="theme-color" content="#3B241C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ================= NAVIGATION (organism) ================= -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Brew &amp; Bloom</span>
+          <span class="brand__tag">Roastery &amp; Coffee Bar</span>
+        </span>
+      </a>
+
+      <nav class="nav__links" aria-label="Main">
+        <a class="nav__link" href="index.html" data-nav>Home</a>
+        <a class="nav__link" href="menu.html" data-nav>Menu</a>
+        <a class="nav__link" href="promotions.html" data-nav>Promotions</a>
+        <a class="nav__link" href="about.html" data-nav>About</a>
+        <a class="nav__link" href="locations.html" data-nav>Locations</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="cart-btn" href="cart.html" aria-label="Shopping cart, empty">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="cart-btn__count" hidden>0</span>
+        </a>
+        <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+          <span class="nav__toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MOBILE DRAWER ================= -->
+  <div class="nav__drawer" id="mobile-drawer">
+    <button type="button" class="nav__scrim" aria-label="Close menu"></button>
+    <div class="nav__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="nav__panel-head">
+        <span class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
+            </svg>
+          </span>
+          <span class="brand__text">
+            <span class="brand__name">Brew &amp; Bloom</span>
+            <span class="brand__tag">Roastery &amp; Coffee Bar</span>
+          </span>
+        </span>
+        <button type="button" class="nav__close" aria-label="Close menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+            <a class="nav__link" href="index.html" data-nav>Home</a>
+      <a class="nav__link" href="menu.html" data-nav>Menu</a>
+      <a class="nav__link" href="promotions.html" data-nav>Promotions</a>
+      <a class="nav__link" href="about.html" data-nav>About</a>
+      <a class="nav__link" href="locations.html" data-nav>Locations</a>
+      <a class="nav__link" href="cart.html" data-nav>Cart</a>
+      <a class="nav__link" href="order-summary.html" data-nav>Order summary</a>
+      <a class="btn btn--primary btn--block" href="menu.html" style="margin-top:1.5rem">Explore the menu</a>
+    </div>
+  </div>
+  <main id="main">
+
+    <!-- ================= PAGE BANNER ================= -->
+    <section class="page-banner">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <span aria-current="page">Cart</span>
+        </nav>
+        <div class="page-banner__inner" style="margin-top:1rem">
+          <span class="eyebrow">Your order</span>
+          <h1>Shopping cart</h1>
+          <p class="lede">
+            Everything you have picked so far. Quantities are saved in this
+            browser only — nothing is sent to a server and no payment is ever
+            taken.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CART (organism) ================= -->
+    <section class="section" aria-label="Cart contents">
+      <div class="container">
+        <div class="cart-layout" data-cart-layout>
+          <div>
+            <div class="cart-meta" style="margin-bottom:1.5rem">
+              <span data-cart-count-label>0 items in your cart</span>
+              <button type="button" class="btn btn--ghost btn--sm" data-cart-clear>
+                Clear cart
+              </button>
+            </div>
+
+            <ul class="cart-list" data-cart-list>
+              <!-- Rendered by js/cart.js from localStorage -->
+            </ul>
+          </div>
+
+          <!-- Summary -->
+          <aside class="cart-summary" aria-labelledby="summary-title">
+            <h2 class="cart-summary__title" id="summary-title">Order summary</h2>
+
+            <div class="cart-summary__row">
+              <span>Items (<span data-cart-count>0</span>)</span>
+              <span class="cart-summary__value" data-cart-subtotal>Rp 0</span>
+            </div>
+            <div class="cart-summary__row">
+              <span>Delivery</span>
+              <span class="cart-summary__value">Rp 0</span>
+            </div>
+            <div class="cart-summary__row">
+              <span>Service fee</span>
+              <span class="cart-summary__value">Rp 0</span>
+            </div>
+
+            <div class="cart-summary__row cart-summary__row--total">
+              <span>Total</span>
+              <span class="cart-summary__value" data-cart-total>Rp 0</span>
+            </div>
+
+            <div class="cart-summary__actions">
+              <a class="btn btn--primary btn--block" href="order-summary.html" data-cart-proceed>
+                Proceed to order summary
+                <svg class="icon btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a class="btn btn--outline btn--block" href="menu.html">
+                Continue shopping
+              </a>
+            </div>
+
+            <p class="cart-summary__note">
+              <strong>Demo checkout.</strong> This prototype simulates an order
+              only. No payment is processed, no order is placed and no personal
+              information is stored.
+            </p>
+          </aside>
+        </div>
+
+        <!-- Empty state -->
+        <div class="empty-state" data-cart-empty hidden>
+          <span class="empty-state__icon" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+          </span>
+          <h2 class="empty-state__title">Your cart is empty</h2>
+          <p class="empty-state__text">
+            Nothing here yet. Browse the menu and add a drink — your choices are
+            kept in this browser so you can come back to them.
+          </p>
+          <div class="empty-state__actions">
+            <a class="btn btn--primary" href="menu.html">Browse the menu</a>
+            <a class="btn btn--outline" href="promotions.html">See sample offers</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER (organism) ================= -->
+  <footer class="footer" data-footer></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+
+</body>
+</html>

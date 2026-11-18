@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order summary — Brew &amp; Bloom</title>
+  <meta name="description" content="Review your sample order and complete a simulated checkout. No payment is processed and no personal data is stored.">
+  <meta name="author" content="Brew &amp; Bloom — university UI/UX case study">
+  <meta name="theme-color" content="#3B241C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ================= NAVIGATION (organism) ================= -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Brew &amp; Bloom</span>
+          <span class="brand__tag">Roastery &amp; Coffee Bar</span>
+        </span>
+      </a>
+
+      <nav class="nav__links" aria-label="Main">
+        <a class="nav__link" href="index.html" data-nav>Home</a>
+        <a class="nav__link" href="menu.html" data-nav>Menu</a>
+        <a class="nav__link" href="promotions.html" data-nav>Promotions</a>
+        <a class="nav__link" href="about.html" data-nav>About</a>
+        <a class="nav__link" href="locations.html" data-nav>Locations</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="cart-btn" href="cart.html" aria-label="Shopping cart, empty">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="cart-btn__count" hidden>0</span>
+        </a>
+        <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+          <span class="nav__toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MOBILE DRAWER ================= -->
+  <div class="nav__drawer" id="mobile-drawer">
+    <button type="button" class="nav__scrim" aria-label="Close menu"></button>
+    <div class="nav__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="nav__panel-head">
+        <span class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
+            </svg>
+          </span>
+          <span class="brand__text">
+            <span class="brand__name">Brew &amp; Bloom</span>
+            <span class="brand__tag">Roastery &amp; Coffee Bar</span>
+          </span>
+        </span>
+        <button type="button" class="nav__close" aria-label="Close menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+            <a class="nav__link" href="index.html" data-nav>Home</a>
+      <a class="nav__link" href="menu.html" data-nav>Menu</a>
+      <a class="nav__link" href="promotions.html" data-nav>Promotions</a>
+      <a class="nav__link" href="about.html" data-nav>About</a>
+      <a class="nav__link" href="locations.html" data-nav>Locations</a>
+      <a class="nav__link" href="cart.html" data-nav>Cart</a>
+      <a class="nav__link" href="order-summary.html" data-nav>Order summary</a>
+      <a class="btn btn--primary btn--block" href="menu.html" style="margin-top:1.5rem">Explore the menu</a>
+    </div>
+  </div>
+  <main id="main">
+
+    <!-- ================= PAGE BANNER ================= -->
+    <section class="page-banner">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <a href="cart.html">Cart</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <span aria-current="page">Order summary</span>
+        </nav>
+        <div class="page-banner__inner" style="margin-top:1rem">
+          <span class="eyebrow">Simulated checkout</span>
+          <h1>Order summary</h1>
+          <p class="lede">
+            Check your order, leave a few details and confirm. This is a
+            <strong>design simulation</strong> — no payment is processed, no
+            order is placed with a shop, and nothing you type is sent anywhere
+            or stored.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ORDER SUMMARY ================= -->
+    <section class="section" aria-label="Order summary">
+      <div class="container">
+        <div class="order-layout" data-order-layout>
+          <div>
+
+            <!-- Items -->
+            <div class="order-panel" style="margin-bottom:1.5rem">
+              <h2 class="order-panel__title">Your items</h2>
+              <p class="order-panel__sub" data-order-count>0 items</p>
+              <div data-order-items>
+                <!-- Rendered by js/order-summary.js from localStorage -->
+              </div>
+            </div>
+
+            <!-- Mock checkout form -->
+            <div class="order-panel" data-order-form-panel>
+              <h2 class="order-panel__title">Delivery details</h2>
+              <p class="order-panel__sub">
+                These fields exist so the form has something to validate. Please
+                do not enter real payment or identity information.
+              </p>
+
+              <div class="notice notice--warn" style="margin-bottom:1.5rem" role="note">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/>
+                </svg>
+                <p>
+                  <strong>Prototype only.</strong>
+                  We never ask for a card number, password or ID. This form does
+                  not transmit anything — it is here to demonstrate validation
+                  and a confirmation state.
+                </p>
+              </div>
+
+              <div class="notice notice--danger" data-form-error-summary hidden tabindex="-1" role="alert" style="margin-bottom:1.5rem">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/>
+                </svg>
+                <p><strong>Please check the highlighted fields and try again.</strong></p>
+              </div>
+
+
+              <form class="form-grid" data-order-form novalidate>
+                <div class="form-grid form-grid--2">
+                  <div class="field">
+                    <label class="field__label" for="order-name">Full name <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" type="text" id="order-name" name="name"
+                           autocomplete="name" required
+                           placeholder="e.g. Daffa Pratama">
+                    <span class="field__error" role="alert"></span>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="order-phone">Phone number <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" type="tel" id="order-phone" name="phone"
+                           autocomplete="tel" required
+                           placeholder="e.g. 0812 3456 7890">
+                    <span class="field__error" role="alert"></span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="order-email">Email address <span class="req" aria-hidden="true">*</span></label>
+                  <input class="input" type="email" id="order-email" name="email"
+                         autocomplete="email" required
+                         placeholder="you@example.com">
+                  <span class="field__hint">Only used to show a confirmation in this demo.</span>
+                  <span class="field__error" role="alert"></span>
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="order-address">Delivery address <span class="req" aria-hidden="true">*</span></label>
+                  <textarea class="textarea" id="order-address" name="address" required
+                            placeholder="Street, number, district, city"></textarea>
+                  <span class="field__error" role="alert"></span>
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="order-notes">Order notes <span class="text-subtle">(optional)</span></label>
+                  <textarea class="textarea" id="order-notes" name="notes"
+                            style="min-height:90px"
+                            placeholder="Anything the barista should know?"></textarea>
+                  <span class="field__error" role="alert"></span>
+                </div>
+
+                <div class="flex-wrap gap-3">
+                  <button type="submit" class="btn btn--primary btn--lg" data-order-submit>
+                    <svg class="icon btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M20 6 9 17l-5-5"/>
+                    </svg>
+                    Place simulated order
+                  </button>
+                  <a class="btn btn--ghost" href="cart.html">Back to cart</a>
+                </div>
+              </form>
+            </div>
+
+
+            <!-- Confirmation state -->
+            <div class="order-panel confirmation" data-order-confirmation hidden>
+              <span class="confirmation__icon" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 6 9 17l-5-5"/>
+                </svg>
+              </span>
+              <h2 class="empty-state__title">Order confirmed (simulated)</h2>
+              <p class="empty-state__text" style="margin-top:.75rem">
+                Thank you, <strong data-confirmation-name>friend</strong> — your
+                simulated order for <strong data-confirmation-count>0 items</strong>
+                totalling <strong data-confirmation-total>Rp 0</strong> has been
+                "placed".
+              </p>
+              <p class="confirmation__ref" data-confirmation-ref>BB-000000</p>
+
+              <div class="notice notice--warn" style="margin-top:1.5rem;text-align:left">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/>
+                </svg>
+                <p>
+                  <strong>Nothing was really ordered.</strong>
+                  No payment was taken, no store received this request and no
+                  personal data was saved. The reference above was generated
+                  locally in your browser.
+                </p>
+              </div>
+
+              <div class="confirmation__actions">
+                <a class="btn btn--primary" href="menu.html">Back to the menu</a>
+                <a class="btn btn--outline" href="index.html">Return home</a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Totals -->
+          <aside class="cart-summary" aria-labelledby="order-summary-title">
+            <h2 class="cart-summary__title" id="order-summary-title">Totals</h2>
+
+            <div class="cart-summary__row">
+              <span>Subtotal</span>
+              <span class="cart-summary__value" data-order-subtotal>Rp 0</span>
+            </div>
+            <div class="cart-summary__row">
+              <span>Delivery</span>
+              <span class="cart-summary__value">Rp 0</span>
+            </div>
+            <div class="cart-summary__row">
+              <span>Service fee</span>
+              <span class="cart-summary__value">Rp 0</span>
+            </div>
+
+            <div class="cart-summary__row cart-summary__row--total">
+              <span>Total</span>
+              <span class="cart-summary__value" data-order-total>Rp 0</span>
+            </div>
+
+            <p class="cart-summary__note">
+              <strong>Simulated checkout.</strong> This prototype only shows
+              how a checkout flow could work. There is no payment gateway, no
+              order database and no data is sent to a server.
+            </p>
+          </aside>
+        </div>
+
+        <!-- Empty state -->
+        <div class="empty-state" data-order-empty hidden>
+          <span class="empty-state__icon" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 2v20l2.5-1.5L9 22l2.5-1.5L14 22l2.5-1.5L19 22V2l-2.5 1.5L14 2l-2.5 1.5L9 2 6.5 3.5 4 2Z"/>
+              <path d="M8 8h8M8 12h8M8 16h5"/>
+            </svg>
+          </span>
+          <h2 class="empty-state__title">There is nothing to check out</h2>
+          <p class="empty-state__text">
+            Your cart is empty. Add a drink from the menu and come back to
+            complete this simulated order.
+          </p>
+          <div class="empty-state__actions">
+            <a class="btn btn--primary" href="menu.html">Browse the menu</a>
+            <a class="btn btn--outline" href="promotions.html">See sample offers</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER (organism) ================= -->
+  <footer class="footer" data-footer></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/order-summary.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home — Brew &amp; Bloom</title>
+  <meta name="description" content="Brew &amp; Bloom is a proposed coffee shop identity for a university UI/UX rebrand case study. Browse the sample menu, promotions and store locator.">
+  <meta name="author" content="Brew &amp; Bloom — university UI/UX case study">
+  <meta name="theme-color" content="#3B241C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ================= NAVIGATION (organism) ================= -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Brew &amp; Bloom</span>
+          <span class="brand__tag">Roastery &amp; Coffee Bar</span>
+        </span>
+      </a>
+
+      <nav class="nav__links" aria-label="Main">
+        <a class="nav__link" href="index.html" data-nav>Home</a>
+        <a class="nav__link" href="menu.html" data-nav>Menu</a>
+        <a class="nav__link" href="promotions.html" data-nav>Promotions</a>
+        <a class="nav__link" href="about.html" data-nav>About</a>
+        <a class="nav__link" href="locations.html" data-nav>Locations</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="cart-btn" href="cart.html" aria-label="Shopping cart, empty">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="cart-btn__count" hidden>0</span>
+        </a>
+        <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+          <span class="nav__toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MOBILE DRAWER ================= -->
+  <div class="nav__drawer" id="mobile-drawer">
+    <button type="button" class="nav__scrim" aria-label="Close menu"></button>
+    <div class="nav__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="nav__panel-head">
+        <span class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
+            </svg>
+          </span>
+          <span class="brand__text">
+            <span class="brand__name">Brew &amp; Bloom</span>
+            <span class="brand__tag">Roastery &amp; Coffee Bar</span>
+          </span>
+        </span>
+        <button type="button" class="nav__close" aria-label="Close menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+            <a class="nav__link" href="index.html" data-nav>Home</a>
+      <a class="nav__link" href="menu.html" data-nav>Menu</a>
+      <a class="nav__link" href="promotions.html" data-nav>Promotions</a>
+      <a class="nav__link" href="about.html" data-nav>About</a>
+      <a class="nav__link" href="locations.html" data-nav>Locations</a>
+      <a class="nav__link" href="cart.html" data-nav>Cart</a>
+      <a class="nav__link" href="order-summary.html" data-nav>Order summary</a>
+      <a class="btn btn--primary btn--block" href="menu.html" style="margin-top:1.5rem">Explore the menu</a>
+    </div>
+  </div>
+  <main id="main">
+
+    <!-- ================= HERO (organism) ================= -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="eyebrow">Roastery &amp; Coffee Bar · Jakarta</span>
+          <h1 class="hero__title">Coffee that<br><em>grows</em> on people</h1>
+          <p class="lede">
+            A neighbourhood coffee bar built on slow mornings and honest beans.
+            We roast in small batches, steep for eighteen hours and make every
+            syrup ourselves — because a good cup should feel like it was made
+            for you.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="menu.html">
+              Explore the menu
+              <svg class="icon btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a class="btn btn--outline btn--lg" href="about.html">Our story</a>
+          </div>
+          <dl class="hero__stats">
+            <div>
+              <dt class="hero__stat-label">Signature drinks</dt>
+              <dd class="hero__stat-value">16</dd>
+            </div>
+            <div>
+              <dt class="hero__stat-label">Sample stores</dt>
+              <dd class="hero__stat-value">6</dd>
+            </div>
+            <div>
+              <dt class="hero__stat-label">Cold brew steep</dt>
+              <dd class="hero__stat-value">18h</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual">
+          <figure class="hero__figure">
+            <img src="assets/images/hero-pour-over.jpg"
+                 alt="A hand pouring a slow pour-over coffee into a glass carafe"
+                 width="800" height="1000" fetchpriority="high" decoding="async">
+          </figure>
+          <figure class="hero__figure hero__figure--small">
+            <img src="assets/images/coffee-beans.jpg"
+                 alt="Freshly roasted coffee beans in warm light"
+                 width="400" height="400" loading="lazy" decoding="async">
+          </figure>
+          <span class="hero__chip">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3l1.9 5.8L20 10.7l-6.1 1.9L12 18.4l-1.9-5.8L4 10.7l6.1-1.9L12 3Z"/>
+            </svg>
+            Roasted in small batches
+          </span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= FEATURED DRINKS ================= -->
+    <section class="section" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow">Most loved</span>
+            <h2 id="featured-title">Featured drinks</h2>
+            <p class="lede">
+              The six we are known for — from the brown sugar latte that made
+              the brand to a cold brew tonic we only started serving last year.
+            </p>
+          </div>
+          <a class="btn btn--outline" href="menu.html">See the full menu</a>
+        </div>
+        <div class="featured-grid" data-featured-grid>
+          <!-- Rendered by js/main.js from js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BRAND INTRODUCTION ================= -->
+    <section class="section section--cream" aria-labelledby="brand-title">
+      <div class="container">
+        <div class="editorial">
+          <div class="editorial__media">
+            <img src="assets/images/barista-hands.jpg"
+                 alt="A barista preparing coffee behind the counter"
+                 width="800" height="600" loading="lazy" decoding="async">
+          </div>
+          <div class="editorial__content">
+            <span class="eyebrow">Our approach</span>
+            <h2 id="brand-title">A slower kind of coffee bar</h2>
+            <p class="lede">
+              Brew &amp; Bloom is a proposed visual identity for a neighbourhood
+              coffee concept — warm, modern and rooted in Indonesian coffee
+              culture. This site is a design prototype: every product, price
+              and location is sample data.
+            </p>
+            <ul class="stack">
+              <li class="flex gap-3">
+                <span class="value-card__icon" style="width:42px;height:42px;font-size:1.1rem" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                    <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
+                  </svg>
+                </span>
+                <span>
+                  <strong>Named origins.</strong>
+                  <span class="text-muted">Every coffee tells you the farm it came from. If we cannot say, we do not serve it.</span>
+                </span>
+              </li>
+              <li class="flex gap-3">
+                <span class="value-card__icon" style="width:42px;height:42px;font-size:1.1rem" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8Z"/>
+                  </svg>
+                </span>
+                <span>
+                  <strong>Made in-store.</strong>
+                  <span class="text-muted">Syrups are cooked each morning and cold brew steeps for eighteen hours.</span>
+                </span>
+              </li>
+              <li class="flex gap-3">
+                <span class="value-card__icon" style="width:42px;height:42px;font-size:1.1rem" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                  </svg>
+                </span>
+                <span>
+                  <strong>Room for everyone.</strong>
+                  <span class="text-muted">A strong espresso, a caffeine-free matcha, or a slow afternoon — all welcome.</span>
+                </span>
+              </li>
+            </ul>
+            <a class="btn btn--primary" href="about.html">Read our full story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= PROMOTIONAL BANNER ================= -->
+    <section class="section section--tight" aria-labelledby="promo-banner-title">
+      <div class="container">
+        <div class="promo-banner">
+          <div class="promo-banner__content">
+            <span class="badge badge--sample">Sample offer</span>
+            <h2 class="promo-banner__title" id="promo-banner-title">Bloom Hour — 25% off every signature drink</h2>
+            <p class="promo-banner__text">
+              Every weekday between 15:00 and 17:00 our signature range is 25%
+              off. The quietest hours of the day are the sweetest hours to sit
+              in. This offer is invented for the case study and cannot be redeemed.
+            </p>
+            <div class="flex-wrap gap-3">
+              <a class="btn btn--inverse" href="promotions.html">See all sample offers</a>
+              <a class="btn btn--outline" style="border-color:rgba(247,242,232,.35);color:#F7F2E8" href="menu.html?category=signature">Browse signature drinks</a>
+            </div>
+          </div>
+          <div class="promo-banner__visual">
+            <img src="assets/images/drink-cold-brew-tall.jpg"
+                 alt="A tall glass of cold brew over ice"
+                 width="600" height="450" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= POPULAR CATEGORIES ================= -->
+    <section class="section" aria-labelledby="categories-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow">Find your cup</span>
+            <h2 id="categories-title">Popular categories</h2>
+            <p class="lede">
+              Start with what you are in the mood for. Every category works
+              with or without milk, hot or iced.
+            </p>
+          </div>
+        </div>
+        <div class="grid grid--3" data-category-grid>
+          <!-- Rendered by js/main.js from js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SAMPLE PROMOTIONS ================= -->
+    <section class="section section--cream" aria-labelledby="offers-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow">Sample data</span>
+            <h2 id="offers-title">Current sample offers</h2>
+            <p class="lede">
+              These promotions are fictional examples created for this design
+              prototype. They are not real discounts from Kopi Kenangan or any
+              other brand.
+            </p>
+          </div>
+          <a class="btn btn--outline" href="promotions.html">All promotions</a>
+        </div>
+        <div class="grid grid--2" data-promo-preview>
+          <!-- Rendered by js/main.js from js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STORE TEASER ================= -->
+    <section class="section" aria-labelledby="stores-title">
+      <div class="container">
+        <div class="editorial editorial--reverse">
+          <div class="editorial__media">
+            <img src="assets/images/cafe-window.jpg"
+                 alt="The window of a coffee bar with warm light inside"
+                 width="800" height="600" loading="lazy" decoding="async">
+          </div>
+          <div class="editorial__content">
+            <span class="eyebrow">Come in</span>
+            <h2 id="stores-title">Find a Brew &amp; Bloom near you</h2>
+            <p class="lede">
+              Six sample locations across Jakarta, Bandung and Surabaya. Each
+              one has a slow bar, a comfortable seat and Wi-Fi that actually
+              works. All addresses below are demonstration data.
+            </p>
+            <ul class="stack" data-store-teaser>
+              <!-- Rendered by js/main.js from js/data.js -->
+            </ul>
+            <a class="btn btn--primary" href="locations.html">Open the store locator</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CLOSING CTA ================= -->
+    <section class="section section--espresso">
+      <div class="container text-center">
+        <span class="eyebrow" style="color:#C58B55">Ready when you are</span>
+        <h2 style="margin-top:.75rem">Your first cup is waiting</h2>
+        <p class="lede mx-auto" style="margin-top:1rem">
+          Browse the menu, pick a favourite and add it to your cart. Checkout
+          is a simulation — no payment is ever taken.
+        </p>
+        <div class="flex-wrap gap-3" style="margin-top:2rem;justify-content:center">
+          <a class="btn btn--inverse btn--lg" href="menu.html">Explore the menu</a>
+          <a class="btn btn--outline btn--lg" style="border-color:rgba(247,242,232,.4);color:#F7F2E8" href="promotions.html">See sample offers</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER (organism) ================= -->
+  <footer class="footer" data-footer></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

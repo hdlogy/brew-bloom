@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Brew &amp; Bloom</title>
+  <meta name="description" content="The Brew &amp; Bloom concept story, brand values and coffee philosophy — a proposed identity for a university rebrand case study.">
+  <meta name="author" content="Brew &amp; Bloom — university UI/UX case study">
+  <meta name="theme-color" content="#3B241C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ================= NAVIGATION (organism) ================= -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Brew &amp; Bloom</span>
+          <span class="brand__tag">Roastery &amp; Coffee Bar</span>
+        </span>
+      </a>
+
+      <nav class="nav__links" aria-label="Main">
+        <a class="nav__link" href="index.html" data-nav>Home</a>
+        <a class="nav__link" href="menu.html" data-nav>Menu</a>
+        <a class="nav__link" href="promotions.html" data-nav>Promotions</a>
+        <a class="nav__link" href="about.html" data-nav>About</a>
+        <a class="nav__link" href="locations.html" data-nav>Locations</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="cart-btn" href="cart.html" aria-label="Shopping cart, empty">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="cart-btn__count" hidden>0</span>
+        </a>
+        <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+          <span class="nav__toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MOBILE DRAWER ================= -->
+  <div class="nav__drawer" id="mobile-drawer">
+    <button type="button" class="nav__scrim" aria-label="Close menu"></button>
+    <div class="nav__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="nav__panel-head">
+        <span class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
+            </svg>
+          </span>
+          <span class="brand__text">
+            <span class="brand__name">Brew &amp; Bloom</span>
+            <span class="brand__tag">Roastery &amp; Coffee Bar</span>
+          </span>
+        </span>
+        <button type="button" class="nav__close" aria-label="Close menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+            <a class="nav__link" href="index.html" data-nav>Home</a>
+      <a class="nav__link" href="menu.html" data-nav>Menu</a>
+      <a class="nav__link" href="promotions.html" data-nav>Promotions</a>
+      <a class="nav__link" href="about.html" data-nav>About</a>
+      <a class="nav__link" href="locations.html" data-nav>Locations</a>
+      <a class="nav__link" href="cart.html" data-nav>Cart</a>
+      <a class="nav__link" href="order-summary.html" data-nav>Order summary</a>
+      <a class="btn btn--primary btn--block" href="menu.html" style="margin-top:1.5rem">Explore the menu</a>
+    </div>
+  </div>
+  <main id="main">
+
+    <!-- ================= PAGE BANNER ================= -->
+    <section class="page-banner">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <span aria-current="page">About</span>
+        </nav>
+        <div class="page-banner__inner" style="margin-top:1rem">
+          <span class="eyebrow">The concept</span>
+          <h1>Why Brew &amp; Bloom</h1>
+          <p class="lede">
+            A proposed identity for a neighbourhood coffee bar that treats
+            everyday coffee as something worth slowing down for — and treats
+            its customers as people, not transactions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDITORIAL STORY ================= -->
+    <section class="section" aria-labelledby="story-title">
+      <div class="container">
+        <div class="editorial">
+          <div class="editorial__media">
+            <img src="assets/images/cafe-interior.jpg"
+                 alt="The warm interior of a coffee bar with wooden tables"
+                 width="800" height="600" loading="lazy" decoding="async">
+          </div>
+          <div class="editorial__content">
+            <span class="eyebrow">The idea</span>
+            <h2 id="story-title">Coffee that grows on people</h2>
+            <p>
+              <em>Brew</em> is the craft — the roast, the grind, the pull, the
+              steep. <em>Bloom</em> is what happens when a place is right: a
+              regular orders the same thing every morning, a stranger stays for
+              one more hour, a cup you did not expect turns into your new
+              favourite.
+            </p>
+            <p class="text-muted">
+              The name is deliberately two simple words rather than a clever
+              compound. It reads quickly on a small screen, it survives being
+              printed on a cup, and it describes the two halves of the idea:
+              precision on one side, warmth on the other.
+
+    <!-- ================= VALUES ================= -->
+    <section class="section section--cream" aria-labelledby="values-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow">What we stand for</span>
+            <h2 id="values-title">Brand values</h2>
+            <p class="lede">
+              Four principles that decide how we make things — and how we talk
+              about them.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid--4">
+          <article class="value-card">
+            <span class="value-card__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l1.9 5.8L20 10.7l-6.1 1.9L12 18.4l-1.9-5.8L4 10.7l6.1-1.9L12 3Z"/>
+                <path d="M18 17l.8 2.2L21 20l-2.2.8L18 23l-.8-2.2L15 20l2.2-.8L18 17Z"/>
+              </svg>
+            </span>
+            <h3 class="value-card__title">Craft over speed</h3>
+            <p class="value-card__text">
+              We slow down where it counts. Syrups are cooked each morning, cold
+              brew steeps for eighteen hours, and no cup leaves the bar until
+              the foam is right.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <span class="value-card__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
+              </svg>
+            </span>
+            <h3 class="value-card__title">Origin in the cup</h3>
+            <p class="value-card__text">
+              Every coffee we serve names the farm it came from. If we cannot
+              tell you where a bean grew, we do not put it on the menu.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <span class="value-card__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+              </svg>
+            </span>
+            <h3 class="value-card__title">Room for everyone</h3>
+            <p class="value-card__text">
+              A caffeine-free matcha, a strong espresso, a slow afternoon — the
+              counter is open to whatever mood you arrive in.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <span class="value-card__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22V9"/><path d="M12 9C12 5 9 2 4 2c0 5 3 8 8 8Z"/><path d="M12 9c0-4 3-7 8-7 0 5-3 8-8 8Z"/>
+              </svg>
+            </span>
+            <h3 class="value-card__title">Grown here</h3>
+            <p class="value-card__text">
+              We work with Indonesian growers first. Our brown sugar, pandan and
+              palm sugar come from local suppliers who we know by name.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+            </p>
+            <div class="flex-wrap gap-3" style="margin-top:1.5rem">
+              <a class="btn btn--primary" href="menu.html">Explore the menu</a>
+              <a class="btn btn--outline" href="locations.html">Find a store</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= COFFEE PHILOSOPHY ================= -->
+    <section class="section" aria-labelledby="philosophy-title">
+      <div class="container">
+        <div class="editorial editorial--reverse">
+          <div class="editorial__media">
+            <img src="assets/images/pour-over-v60.jpg"
+                 alt="A pour-over cone brewer mid-pour on a wooden table"
+                 width="800" height="600" loading="lazy" decoding="async">
+          </div>
+          <div class="editorial__content">
+            <span class="eyebrow">Coffee philosophy</span>
+            <h2 id="philosophy-title">Slow by design</h2>
+            <p>
+              Most coffee is made for speed — the drive-through, the queue, the
+              meeting. Our approach is the opposite. We brew for the moment the
+              cup arrives: not too hot to hold, not too cool to lose its
+              character.
+            </p>
+            <p class="text-muted">
+              It shows in small decisions. Milk is steamed to 60°C so it tastes
+              sweet rather than scalded. Syrups are cooked from raw sugar, not
+              mixed from concentrate. Cold brew steeps for eighteen hours instead
+              of four. None of it is fast, and that is the point.
+            </p>
+
+            <ul class="stack" style="margin-top:1.5rem">
+              <li class="flex gap-3">
+                <strong class="value-card__icon" style="width:40px;height:40px;font-size:1rem" aria-hidden="true">01</strong>
+                <span>
+                  <strong>Small-batch roasting.</strong>
+                  <span class="text-muted">Seasonal blends, roasted close to the shop so they arrive fresh.</span>
+                </span>
+              </li>
+              <li class="flex gap-3">
+                <strong class="value-card__icon" style="width:40px;height:40px;font-size:1rem" aria-hidden="true">02</strong>
+                <span>
+                  <strong>Named single origins.</strong>
+                  <span class="text-muted">A rotating pour-over menu built around one farm at a time.</span>
+                </span>
+              </li>
+              <li class="flex gap-3">
+                <strong class="value-card__icon" style="width:40px;height:40px;font-size:1rem" aria-hidden="true">03</strong>
+                <span>
+                  <strong>Syrups made in-store.</strong>
+                  <span class="text-muted">Brown sugar, pandan and vanilla — cooked fresh every morning.</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= CONCEPT TIMELINE ================= -->
+    <section class="section section--cream" aria-labelledby="concept-title">
+      <div class="container container--narrow">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow">The concept</span>
+            <h2 id="concept-title">How the idea was shaped</h2>
+            <p class="lede">
+              The rebrand concept was developed from an analysis of the original
+              brand’s visual identity and customer experience. These are the
+              design decisions behind Brew &amp; Bloom.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__item">
+            <p class="timeline__label">Diagnosis</p>
+            <div>
+              <h3 class="timeline__title">Reading the original identity</h3>
+              <p class="timeline__text">
+                The brand being analysed relies on heavy red, dense promotional
+                graphics and a fast-service language. The visual system is
+                consistent but loud, which works for reach and works less well
+                for a calm, premium experience.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <p class="timeline__label">Positioning</p>
+            <div>
+              <h3 class="timeline__title">From fast service to slow craft</h3>
+              <p class="timeline__text">
+                Brew &amp; Bloom moves the promise from speed to craft. The
+                language changes from “praktis dan cepat” to a slower, more
+                specific set of claims about origin and preparation.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <p class="timeline__label">Identity</p>
+            <div>
+              <h3 class="timeline__title">A warm, editorial palette</h3>
+              <p class="timeline__text">
+                Espresso brown, cream, sage green and caramel replace the
+                high-saturation red. A serif display face gives the brand an
+                editorial, considered feel; a clean sans-serif keeps the
+                interface legible.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <p class="timeline__label">Prototype</p>
+            <div>
+              <h3 class="timeline__title">This coded prototype</h3>
+              <p class="timeline__text">
+                Eight pages, one shared component library and a full browse-to-
+                checkout flow. It exists to make the design decisions testable
+                with real users rather than only in a static mock-up.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section section--espresso">
+      <div class="container text-center">
+        <span class="eyebrow" style="color:#C58B55">Try it</span>
+        <h2 style="margin-top:.75rem">See the menu for yourself</h2>
+        <p class="lede mx-auto" style="margin-top:1rem">
+          Sixteen drinks, three categories, one very slow cold brew. Pick
+          something and add it to your cart — checkout is a simulation.
+        </p>
+        <div class="flex-wrap gap-3" style="margin-top:2rem;justify-content:center">
+          <a class="btn btn--inverse btn--lg" href="menu.html">Explore the menu</a>
+          <a class="btn btn--outline btn--lg" style="border-color:rgba(247,242,232,.4);color:#F7F2E8" href="locations.html">Find a store</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER (organism) ================= -->
+  <footer class="footer" data-footer></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
